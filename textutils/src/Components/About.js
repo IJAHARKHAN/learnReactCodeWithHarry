@@ -7,9 +7,6 @@ const [styleMode, setstyleMode] = useState({
     color:'black'   
 })
 
-
-
-
     let btnDarkModeToggle = () =>{
        if(styleMode.backgroundColor === 'white'){
         setstyleMode({
@@ -29,13 +26,10 @@ const [styleMode, setstyleMode] = useState({
        }
     }
 
-   
-    
-
-
 
   return (
     <>
+    <div className='container'>
     <div className="accordion" id="accordionExample" style={styleMode}>
   <div className="accordion-item" style={styleMode}>
     <h2 className="accordion-header" >
@@ -75,6 +69,7 @@ const [styleMode, setstyleMode] = useState({
   </div>
 </div>
 <button className="btn btn-primary btn-sm mt-2" onClick={btnDarkModeToggle}>{btnText}</button>
+</div>
     
     
     </>

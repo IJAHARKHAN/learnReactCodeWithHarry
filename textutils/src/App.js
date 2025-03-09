@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
@@ -22,15 +23,23 @@ function App() {
  }
   return (
     <>
-      <Navbar projectname="TextUtils" home='Home' about="About" mode={mode} toggleDarkMode={btnToggleThemeMode}/>
-
+      
+      {/* <Navbar projectname="TextUtils" home='Home' about="About" mode={mode} toggleDarkMode={btnToggleThemeMode}/> */}
    
-        <TextForm formText="Convert Text Formate" mode={mode}/>
+        {/* <TextForm formText="Convert Text Formate" mode={mode}/> */}
     
 
       {/* <div className="container mt-3">
       <About/>
       </div> */}
+
+<BrowserRouter>
+      <Navbar projectname="TextUtils" home='Home' about="About" mode={mode} toggleDarkMode={btnToggleThemeMode}/>
+      <Routes>
+        <Route exact path="/" element={<TextForm formText="Convert Text Formate" mode={mode}/>}/>
+        <Route exact path="/about" element={<About />} />  
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }
