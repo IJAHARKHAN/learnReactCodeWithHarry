@@ -1,0 +1,11 @@
+.custome-card{
+
+}
+
+.custome-card .card{
+   width: 18rem;
+}
+
+.custome-card .card-text{
+    height: 50px;
+}
