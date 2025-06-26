@@ -9,6 +9,7 @@ const NoteState = (props) =>{
     }
     const [state, setstate] = useState(person)
 
+
     const update = () =>{
         setTimeout(() => {
             setstate({

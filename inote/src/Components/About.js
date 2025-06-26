@@ -3,6 +3,7 @@ import NoteContext from '../Context/NoteContext'
 
 function About() {
   const getContextVal = useContext(NoteContext)
+ 
   
   useEffect(() => {
   
